@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute;
+			margin-left: 650px; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			margin-left: 1700px;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 260px; ">		
+		<img class="shooter" src="peashooter.png"  style="top: 400px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 530px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 650px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 770px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px">
+		<img class="zombies" src="zombie2.png" style="top: 350px">
+		<img class="zombies" src="zombie2.png" style="top: 470px">
+		<img class="zombies" src="zombie4.png" style="top: 600px">
+		<img class="zombies" src="zombie4.png" style="top: 750px">
+	</div>
+
+
+<script>
+	let boxes = document.querySelectorAll(".zombies");
+	let boxes = document.querySelectorAll(".q1").style.display = "block";;
+	let left = 1700;
+	let left2 = 1700;
+	let left3 = 1700;
+	let left4 = 1700;
+	let left5 = 1700;
+
+	boxes[1].onclick = function() {
+		left = left - 150
+		console.log(left);
+		boxes[1].style.marginLeft = left + "px";
+		boxes[1].style.transition = "0.5s";
+		if (left==500) {
+			boxes[1].style.display = "none";
+		}
+	}
+
+	boxes[2].onclick = function() {
+		left2 = left2 - 150
+		console.log(left);
+		boxes[2].style.marginLeft = left2 + "px";
+		boxes[2].style.transition = "0.5s";
+		if (left2==500) {
+			boxes[2].style.display = "none";
+		}
+	}
+
+	boxes[3].onclick = function() {
+		left3 = left3 - 150
+		console.log(left);
+		boxes[3].style.marginLeft = left3 + "px";
+		boxes[3].style.transition = "0.5s";
+		if (left3==500) {
+			boxes[3].style.display = "none";
+		}
+	}
+
+	boxes[4].onclick = function() {
+		left4 = left4 - 150
+		console.log(left);
+		boxes[4].style.marginLeft = left4 + "px";
+		boxes[4].style.transition = "0.5s";
+		if (left4==500) {
+			boxes[4].style.display = "none";
+		}
+	}
+
+	boxes[0].onclick = function() {
+		left5 = left5 - 150
+		console.log(left);
+		boxes[0].style.marginLeft = left5 + "px";
+		boxes[0].style.transition = "0.5s";
+		if (left5==500) {
+			boxes[0].style.display = "none";
+		}
+	}
+</script>
+</body>
+</html>
